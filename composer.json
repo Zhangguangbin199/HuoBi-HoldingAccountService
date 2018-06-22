@@ -1,0 +1,56 @@
+{
+    "description" : "iAFB - Holding Account Service",
+    "name" : "iappsasia/iafb",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Chunyap",
+            "email": "chunyap@iappsasia.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Michael",
+            "email": "michael@iappsasia.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "ask@iappsasia.com"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:iappsasia/iAPPS-package-common.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.4",
+        "vlucas/phpdotenv": "^2.0",
+        "guzzlehttp/guzzle": "^6.0",
+        "guzzlehttp/psr7": "1.3.0",
+        "aws/aws-sdk-php": "2.*",
+        "phpseclib/phpseclib": "0.3.*",
+        "iapps/common": "0.1.*",
+        "moontoast/math": "^1.1"
+    },
+    "require-dev": {
+        "mikey179/vfsStream": "1.1.*",
+        "phpunit/phpunit": "4.7.*",
+        "raveren/kint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iapps\\": "application/class/Iapps/",
+            "Iafb\\": "application/class/Iafb/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php composer.phar dumpautoload -o"
+        ],
+        "post-update-cmd": [
+            "php composer.phar dumpautoload -o"
+        ]
+    }
+}
