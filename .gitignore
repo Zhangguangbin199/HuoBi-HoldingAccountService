@@ -22,3 +22,7 @@ application/logs/*
 vendor/*
 upload/*
 public/upload/*
+.buildpath
+.gitattributes
+.project
+.settings/org.eclipse.php.core.prefs
